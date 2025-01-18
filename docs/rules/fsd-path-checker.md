@@ -1,4 +1,6 @@
-# feature sliced design import checker (`fsd-path-checker`)
+# Feature sliced design import checker (`abuzar-plugin/fsd-path-checker`)
+
+<!-- end auto-generated rule header -->
 
 Check that imports within the same slices are relative
 

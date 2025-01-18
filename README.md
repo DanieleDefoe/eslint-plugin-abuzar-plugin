@@ -21,49 +21,56 @@ npm install eslint-plugin-abuzar-plugin --save-dev
 In your [configuration file](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file), import the plugin `eslint-plugin-abuzar-plugin` and add `abuzar-plugin` to the `plugins` key:
 
 ```js
-import abuzar-plugin from "eslint-plugin-abuzar-plugin";
+import abuzarPlugin from "eslint-plugin-abuzar-plugin";
 
 export default [
-    {
-        plugins: {
-            abuzar-plugin
-        }
-    }
+  {
+    plugins: {
+      "abuzar-plugin": abuzarPlugin,
+    },
+  },
 ];
 ```
 
+Or if you are using the old ESLint config format
+
+```js
+export default {
+  plugins: ["abuzar-plugin"],
+};
+```
 
 Then configure the rules you want to use under the `rules` key.
 
 ```js
-import abuzar-plugin from "eslint-plugin-abuzar-plugin";
+import abuzarPlugin from "eslint-plugin-abuzar-plugin";
 
 export default [
-    {
-        plugins: {
-            abuzar-plugin
-        },
-        rules: {
-            "abuzar-plugin/rule-name": "warn"
-        }
-    }
+  {
+    plugins: {
+      "abuzar-plugin": abuzarPlugin,
+    },
+    rules: {
+      "abuzar-plugin/fsd-path-checker": "error",
+    },
+  },
 ];
 ```
-
-
 
 ## Configurations
 
 <!-- begin auto-generated configs list -->
+
 TODO: Run eslint-doc-generator to generate the configs list (or delete this section if no configs are offered).
+
 <!-- end auto-generated configs list -->
-
-
 
 ## Rules
 
 <!-- begin auto-generated rules list -->
-TODO: Run eslint-doc-generator to generate the rules list.
+
+| Name                                               | Description                          |
+| :------------------------------------------------- | :----------------------------------- |
+| [fsd-path-checker](docs/rules/fsd-path-checker.md) | feature sliced design import checker |
+
 <!-- end auto-generated rules list -->
-
-
