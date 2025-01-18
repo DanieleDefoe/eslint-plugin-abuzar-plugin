@@ -57,14 +57,6 @@ export default [
 ];
 ```
 
-## Configurations
-
-<!-- begin auto-generated configs list -->
-
-TODO: Run eslint-doc-generator to generate the configs list (or delete this section if no configs are offered).
-
-<!-- end auto-generated configs list -->
-
 ## Rules
 
 <!-- begin auto-generated rules list -->
