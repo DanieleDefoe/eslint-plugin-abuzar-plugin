@@ -9,11 +9,11 @@ You'll first need to install [ESLint](https://eslint.org/):
 ```sh
 npm i -D eslint 
 ```
-
+or
 ```sh
 yarn add -D eslint 
 ```
-
+or
 ```sh
 pnpm i -D eslint 
 ```
@@ -23,11 +23,11 @@ Next, install `eslint-plugin-abuzar-plugin`:
 ```sh
 npm i -D eslint-plugin-abuzar-plugin
 ```
-
+or
 ```sh
 yarn add -D eslint-plugin-abuzar-plugin
 ```
-
+or
 ```sh
 pnpm i -D eslint-plugin-abuzar-plugin
 ```
