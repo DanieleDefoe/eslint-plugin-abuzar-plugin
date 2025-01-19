@@ -1,4 +1,4 @@
-# eslint-plugin-abuzar-plugin
+# eslint-plugin-fsd-turbo
 
 eslint plugin for FSD architecture
 
@@ -7,37 +7,45 @@ eslint plugin for FSD architecture
 You'll first need to install [ESLint](https://eslint.org/):
 
 ```sh
-npm i -D eslint 
-```
-or
-```sh
-yarn add -D eslint 
-```
-or
-```sh
-pnpm i -D eslint 
+npm i -D eslint
 ```
 
-Next, install `eslint-plugin-abuzar-plugin`:
+or
 
 ```sh
-npm i -D eslint-plugin-abuzar-plugin
+yarn add -D eslint
 ```
+
 or
+
 ```sh
-yarn add -D eslint-plugin-abuzar-plugin
+pnpm i -D eslint
 ```
-or
+
+Next, install `eslint-plugin-fsd-turbo`:
+
 ```sh
-pnpm i -D eslint-plugin-abuzar-plugin
+npm i -D eslint-plugin-fsd-turbo
+```
+
+or
+
+```sh
+yarn add -D eslint-plugin-fsd-turbo
+```
+
+or
+
+```sh
+pnpm i -D eslint-plugin-fsd-turbo
 ```
 
 ## Usage
 
-In your [configuration file](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file), import the plugin `eslint-plugin-abuzar-plugin` and add `abuzar-plugin` to the `plugins` key:
+In your [configuration file](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file), import the plugin `eslint-plugin-fsd-turbo` and add `abuzar-plugin` to the `plugins` key:
 
 ```js
-import abuzarPlugin from "eslint-plugin-abuzar-plugin";
+import abuzarPlugin from "eslint-plugin-fsd-turbo";
 
 export default [
   {
@@ -59,7 +67,7 @@ export default {
 Then configure the rules you want to use under the `rules` key.
 
 ```js
-import abuzarPlugin from "eslint-plugin-abuzar-plugin";
+import abuzarPlugin from "eslint-plugin-fsd-turbo";
 
 export default [
   {
