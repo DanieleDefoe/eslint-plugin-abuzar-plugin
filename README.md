@@ -42,15 +42,15 @@ pnpm i -D eslint-plugin-fsd-turbo
 
 ## Usage
 
-In your [configuration file](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file), import the plugin `eslint-plugin-fsd-turbo` and add `abuzar-plugin` to the `plugins` key:
+In your [configuration file](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file), import the plugin `eslint-plugin-fsd-turbo` and add `fsd-turbo` to the `plugins` key:
 
 ```js
-import abuzarPlugin from "eslint-plugin-fsd-turbo";
+import fsdTurboPlugin from "eslint-plugin-fsd-turbo";
 
 export default [
   {
     plugins: {
-      "abuzar-plugin": abuzarPlugin,
+      "fsd-turbo": fsdTurboPlugin,
     },
   },
 ];
@@ -60,22 +60,22 @@ Or if you are using the old ESLint config format
 
 ```js
 export default {
-  plugins: ["abuzar-plugin"],
+  plugins: ["fsd-turbo"],
 };
 ```
 
 Then configure the rules you want to use under the `rules` key.
 
 ```js
-import abuzarPlugin from "eslint-plugin-fsd-turbo";
+import fsdTurboPlugin from "eslint-plugin-fsd-turbo";
 
 export default [
   {
     plugins: {
-      "abuzar-plugin": abuzarPlugin,
+      "fsd-turbo": fsdTurboPlugin,
     },
     rules: {
-      "abuzar-plugin/fsd-path-checker": "error",
+      "fsd-turbo/fsd-path-checker": "error",
     },
   },
 ];
