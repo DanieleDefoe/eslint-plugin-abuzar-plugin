@@ -4,28 +4,30 @@
  */
 "use strict";
 
-//------------------------------------------------------------------------------
-// Requirements
-//------------------------------------------------------------------------------
-
 const rule = require("../../../lib/rules/fsd-path-checker"),
   RuleTester = require("eslint").RuleTester;
-
-
-//------------------------------------------------------------------------------
-// Tests
-//------------------------------------------------------------------------------
 
 const ruleTester = new RuleTester();
 ruleTester.run("fsd-path-checker", rule, {
   valid: [
-    // give me some code that won't trigger a warning
+    {
+      filename:
+        "/Users/vendor_a.mamedova/dev/production-react/src/features/addCommentForm",
+      code: 'import { module } from "../lib/module"',
+    },
   ],
 
   invalid: [
     {
-      code: "qwer",
-      errors: [{ messageId: "Fill me in.", type: "Me too" }],
+      filename:
+        "/Users/vendor_a.mamedova/dev/production-react/src/features/addCommentForm",
+      code: 'import { module } from "~/features/addCommentForm/lib/module"',
+      errors: [
+        {
+          messageId: "fsd-relative-import-error",
+        },
+      ],
+      options: [{ alias: "~" }],
     },
   ],
 });
