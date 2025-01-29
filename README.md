@@ -75,7 +75,12 @@ export default [
       "fsd-turbo": fsdTurboPlugin,
     },
     rules: {
-      "fsd-turbo/fsd-path-checker": "error",
+      "fsd-turbo/fsd-path-checker": [
+        "error",
+        {
+          alias: "@",
+        },
+      ],
     },
   },
 ];
@@ -88,5 +93,6 @@ export default [
 | Name                                               | Description                          |
 | :------------------------------------------------- | :----------------------------------- |
 | [fsd-path-checker](docs/rules/fsd-path-checker.md) | feature sliced design import checker |
+|                                                    | options: `{ alias: string }`         |
 
 <!-- end auto-generated rules list -->
