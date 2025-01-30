@@ -10,9 +10,13 @@
   ],
   "author": "abuzar",
   "main": "./lib/index.js",
-  "exports": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./helpers": "./helpers/index.js"
+  },
   "files": [
-    "lib"
+    "lib",
+    "helpers"
   ],
   "scripts": {
     "lint": "npm-run-all \"lint:*\"",
