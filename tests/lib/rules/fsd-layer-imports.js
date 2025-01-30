@@ -3,7 +3,7 @@ import rule from "../../../lib/rules/fsd-layer-imports.js";
 import { aliasOptions } from "../../../helpers/index.js";
 
 /**
- * @fileoverview Lower layers cannot import upper layers
+ * @fileoverview Only lower layers can be imported
  * @author Abuzar
  */
 
