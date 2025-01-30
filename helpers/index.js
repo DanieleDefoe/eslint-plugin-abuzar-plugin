@@ -12,4 +12,6 @@ export const layers = [
   "app",
 ];
 
+export const layersWithoutApp = layers.filter((layer) => layer !== "app");
+
 export const aliasOptions = [{ alias: "~" }];
