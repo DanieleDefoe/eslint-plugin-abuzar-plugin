@@ -1,9 +1,5 @@
 # Feature sliced design import checker (`fsd-turbo-plugin/fsd-path-checker`)
 
-<!-- end auto-generated rule header -->
-
-Check that imports within the same slices are relative
-
 ## Rule Details
 
 This rule aims to ensure that imports within the same slices are relative.
@@ -24,12 +20,8 @@ import type { IButton } from "../lib/types/button";
 
 ### Options
 
-If there are any options, describe them here. Otherwise, delete this section.
+- alias: string
 
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
-
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+This rule should be used only when the project is using the feature sliced design architecture.

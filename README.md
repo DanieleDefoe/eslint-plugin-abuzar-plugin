@@ -90,9 +90,10 @@ export default [
 
 <!-- begin auto-generated rules list -->
 
-| Name                                               | Description                          |
-| :------------------------------------------------- | :----------------------------------- |
-| [fsd-path-checker](docs/rules/fsd-path-checker.md) | feature sliced design import checker |
-|                                                    | options: `{ alias: string }`         |
+| Name                                                 | Description                          |
+| :--------------------------------------------------- | :----------------------------------- |
+| [fsd-path-checker](docs/rules/fsd-path-checker.md)   | feature sliced design import checker |
+| [public-api-import](docs/rules/public-api-import.md) | only allow imports from public api,  |
+|                                                      | from index.ts                        |
 
 <!-- end auto-generated rules list -->
