@@ -1,13 +1,14 @@
+import { RuleTester } from "eslint";
+import rule from "../../../lib/rules/fsd-path-checker.js";
+import { aliasOptions } from "../../../helpers/index.js";
+
 /**
  * @fileoverview feature sliced design import checker
  * @author abuzar
  */
-"use strict";
-
-const rule = require("../../../lib/rules/fsd-path-checker"),
-  RuleTester = require("eslint").RuleTester;
 
 const ruleTester = new RuleTester();
+
 ruleTester.run("fsd-path-checker", rule, {
   valid: [
     {
@@ -27,7 +28,18 @@ ruleTester.run("fsd-path-checker", rule, {
           messageId: "fsd-relative-import-error",
         },
       ],
-      options: [{ alias: "~" }],
+      options: aliasOptions,
+    },
+    {
+      filename:
+        "/Users/vendor_a.mamedova/dev/production-react/src/entities/addCommentForm/lib/module.tsx",
+      code: 'import { module } from "~/entities/addCommentForm/ui/addCommentForm/AddCommentForm.tsx"',
+      errors: [
+        {
+          messageId: "fsd-relative-import-error",
+        },
+      ],
+      options: aliasOptions,
     },
   ],
 });

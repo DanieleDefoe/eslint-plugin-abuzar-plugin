@@ -1,6 +1,7 @@
 {
   "name": "eslint-plugin-fsd-turbo",
   "version": "3.0.1",
+  "type": "module",
   "description": "eslint plugin for FSD architecture",
   "keywords": [
     "eslint",
@@ -19,9 +20,6 @@
     "lint:js": "eslint .",
     "test": "mocha tests --recursive",
     "update:eslint-docs": "eslint-doc-generator"
-  },
-  "dependencies": {
-    "requireindex": "^1.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
