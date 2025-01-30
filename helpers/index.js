@@ -19,7 +19,7 @@ export const allowedLayerImports = {
   pages: ["shared", "entities", "features", "widgets"],
   widgets: ["shared", "entities", "features"],
   features: ["shared", "entities"],
-  entities: ["shared", "entities"],
+  entities: ["shared"],
   shared: ["shared"],
 };
 
