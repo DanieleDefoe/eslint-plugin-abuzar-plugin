@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
+    "dependency-cruiser": "^16.9.0",
     "eslint": "^9.19.0",
     "eslint-doc-generator": "^2.0.2",
     "eslint-plugin-eslint-plugin": "^6.4.0",

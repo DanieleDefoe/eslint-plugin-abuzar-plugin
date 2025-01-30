@@ -1,6 +1,6 @@
 import { RuleTester } from "eslint";
 import rule from "../../../lib/rules/fsd-layer-imports.js";
-import { aliasOptions } from "../../../helpers.js";
+import { aliasOptions } from "../../../helpers/index.js";
 
 /**
  * @fileoverview Lower layers cannot import upper layers
@@ -26,7 +26,7 @@ ruleTester.run("fsd-layer-imports", rule, {
     {
       filename:
         "/Users/vendor_a.mamedova/dev/production-react/src/widgets/addCommentForm/lib/module.tsx",
-      code: 'import redux from "redux',
+      code: 'import redux from "redux"',
       options: aliasOptions,
     },
   ],
@@ -37,12 +37,14 @@ ruleTester.run("fsd-layer-imports", rule, {
         "/Users/vendor_a.mamedova/dev/production-react/src/features/addCommentForm/lib/module.tsx",
       code: 'import { widget } from "~/widgets/addCommentForm"',
       options: aliasOptions,
+      errors: [{ messageId: "fsd-layer-import-error" }],
     },
     {
       filename:
         "/Users/vendor_a.mamedova/dev/production-react/src/shared/addCommentForm/lib/module.tsx",
       code: 'import { Provider } from "~/app/providers"',
       options: aliasOptions,
+      errors: [{ messageId: "fsd-layer-import-error" }],
     },
   ],
 });
