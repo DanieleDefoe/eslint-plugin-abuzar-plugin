@@ -1,5 +1,7 @@
 import { RuleTester } from "eslint";
-import rule from "../../../lib/rules/fsd-layer-imports.js";
+import rule, {
+  ALLOWED_LAYER_IMPORTS_ERROR,
+} from "../../../lib/rules/fsd-layer-imports.js";
 import { aliasOptions } from "../../../helpers/index.js";
 
 /**
@@ -37,14 +39,14 @@ ruleTester.run("fsd-layer-imports", rule, {
         "/Users/vendor_a.mamedova/dev/production-react/src/features/addCommentForm/lib/module.tsx",
       code: 'import { widget } from "~/widgets/addCommentForm"',
       options: aliasOptions,
-      errors: [{ messageId: "fsd-layer-import-error" }],
+      errors: [{ messageId: ALLOWED_LAYER_IMPORTS_ERROR }],
     },
     {
       filename:
         "/Users/vendor_a.mamedova/dev/production-react/src/shared/addCommentForm/lib/module.tsx",
       code: 'import { Provider } from "~/app/providers"',
       options: aliasOptions,
-      errors: [{ messageId: "fsd-layer-import-error" }],
+      errors: [{ messageId: ALLOWED_LAYER_IMPORTS_ERROR }],
     },
   ],
 });

@@ -1,5 +1,5 @@
 import { RuleTester } from "eslint";
-import rule from "../../../lib/rules/fsd-path-checker.js";
+import rule, { FSD_IMPORT_ERROR } from "../../../lib/rules/fsd-path-checker.js";
 import { aliasOptions } from "../../../helpers/index.js";
 
 /**
@@ -25,7 +25,7 @@ ruleTester.run("fsd-path-checker", rule, {
       code: 'import { module } from "~/features/addCommentForm/lib/module"',
       errors: [
         {
-          messageId: "fsd-relative-import-error",
+          messageId: FSD_IMPORT_ERROR,
         },
       ],
       options: aliasOptions,
@@ -36,7 +36,7 @@ ruleTester.run("fsd-path-checker", rule, {
       code: 'import { module } from "~/entities/addCommentForm/ui/addCommentForm/AddCommentForm.tsx"',
       errors: [
         {
-          messageId: "fsd-relative-import-error",
+          messageId: FSD_IMPORT_ERROR,
         },
       ],
       options: aliasOptions,

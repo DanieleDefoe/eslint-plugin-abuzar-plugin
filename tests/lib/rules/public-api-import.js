@@ -1,5 +1,8 @@
 import { RuleTester } from "eslint";
-import rule from "../../../lib/rules/public-api-import.js";
+import rule, {
+  PUBLIC_ERROR,
+  TESTING_PUBLIC_ERROR,
+} from "../../../lib/rules/public-api-import.js";
 import { aliasOptions, testFilesOptions } from "../../../helpers/index.js";
 
 /**
@@ -35,15 +38,16 @@ ruleTester.run("public-api-import", rule, {
   invalid: [
     {
       code: 'import { module } from "~/entities/article/lib/module"',
-      errors: [{ messageId: "public-api-import" }],
+      errors: [{ messageId: PUBLIC_ERROR }],
       options: aliasOptions,
+      output: 'import { module } from "~/entities/article"',
     },
     {
       filename:
         "/Users/vendor_a.mamedova/dev/production-react/src/features/addCommentForm.tsx",
       code: 'import { Comment } from "~/entities/comment/testing"',
       options: testFilesOptions,
-      errors: [{ messageId: "testing-public-api-import" }],
+      errors: [{ messageId: TESTING_PUBLIC_ERROR }],
     },
   ],
 });
